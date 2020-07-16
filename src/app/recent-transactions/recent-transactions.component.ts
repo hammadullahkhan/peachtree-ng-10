@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
-import MockedTransactions from '../../assets/mock/transactions.json';
+// import MockedTransactions from '../../assets/mock/transactions.json';
 import { ITransaction } from '../models/transaction.model';
 
-// import { ITransfer } from '../models/transfer.model';
 import { DataService } from "../services/data.service";
+import { MappingService } from "../services/mapping.service";
 
 @Component({
   selector: 'app-recent-transactions',
@@ -14,42 +14,26 @@ import { DataService } from "../services/data.service";
 export class RecentTransactionsComponent implements OnInit {
 
   transactions: ITransaction[];
-  // transfer: ITransfer;
+  searchMerchant: string;
   
-  constructor(private data: DataService) { }
+  constructor(private data: DataService, private mapService: MappingService) { }
 
   ngOnInit(): void {
-    this.cloneData();
-    this.negativeAmount();
-    
+    this.loadData();
+    this.listenTransfers();
+  }
+
+  loadData() {
+    this.transactions = this.mapService.loadMockedData();
+  }
+
+  listenTransfers() {
     this.data.currentMessage.subscribe(message => {
       if (message && !message.isPreview) {
-        this.mapData(message);
+        const trans = this.mapService.mapTransferToTransactions(message);
+        this.transactions.unshift(trans);
+        console.log(this.transactions)
       }      
     });
   }
-
-  mapData(message) {
-    // this.transfer = message; 
-    // console.log('trans', this.transfer)
-    const trans: ITransaction = {
-      amount: message.amount * -1,
-      categoryCode: "#d51271",
-      transactionType: 'Transfer',
-      merchant: message.toAccount,
-      merchantLogo: '',
-      transactionDate: Date.now()
-    };
-    this.transactions.unshift(trans);
-  }
-
-  cloneData() {
-    this.transactions = JSON.parse(JSON.stringify(MockedTransactions.data));    
-    // console.log(this.transactions)
-  }
-
-  negativeAmount() {
-    this.transactions.forEach( item => item.amount = item.amount * -1);
-  }
-
 }

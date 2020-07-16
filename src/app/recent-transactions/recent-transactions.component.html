@@ -8,7 +8,8 @@
     <div class="transaction-contents">
         <div class="actions">
             <div class="action act-1">
-                <input type="text" placeholder="Search by typing...">
+                <!-- <input type="text" #iSearch placeholder="Search by typing..." (input)="searchTransaction(iSearch.value)"> -->
+                <input type="text" [(ngModel)]="searchMerchant" placeholder="Search by typing...">
             </div>
             <div class="action act-2">
                 <div class="act-field">Sort by</div>
@@ -19,7 +20,7 @@
         </div>
 
         <div class="tabular-data">
-            <div *ngFor="let item of transactions" class="data-row">
+            <div *ngFor="let item of transactions | transactionsFilter:searchMerchant" class="data-row">
                 
                 <div class="data-item color-col" style="background-color: {{item.categoryCode}};">&nbsp;&nbsp;</div>
                 <div class="data-item">{{item.transactionDate | date:'MMM dd'}}</div>
