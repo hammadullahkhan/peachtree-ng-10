@@ -1,0 +1,39 @@
+<div class="transactions">
+
+    <div class="header">
+        <div class="logo"><img src="./assets/icons/briefcase.png"></div>
+        <div class="heading">Recent Transactions</div>
+    </div>
+
+    <div class="transaction-contents">
+        <div class="actions">
+            <div class="action act-1">
+                <input type="text" placeholder="Search by typing...">
+            </div>
+            <div class="action act-2">
+                <div class="act-field">Sort by</div>
+                <div class="act-field cap">Date</div>
+                <div class="act-field cap">Beneficiary</div>
+                <div class="act-field cap">Amount</div>
+            </div>
+        </div>
+
+        <div class="tabular-data">
+            <div *ngFor="let item of transactions" class="data-row">
+                
+                <div class="data-item color-col" style="background-color: {{item.categoryCode}};">&nbsp;&nbsp;</div>
+                <div class="data-item">{{item.transactionDate | date:'MMM dd'}}</div>
+                <div class="data-item"><img src="{{item.merchantLogo}}" class="merchant-logo"></div>
+                <div class="data-item merchant-name">
+                    {{item.merchant}}
+                    <div class="merchant-type">{{item.transactionType}}</div>                
+                </div>
+                <div class="data-item">{{item.amount | currency}}</div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

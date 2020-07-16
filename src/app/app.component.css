@@ -1,0 +1,40 @@
+.app {
+    
+}
+
+.app-header {
+    border-top-width: thin;
+    border-top-color: #e25a2c;
+    border-top-style: inset;
+
+    border-bottom-color: #e25a2c;
+    border-bottom-style: inset;
+
+    display: flex;
+}
+.header-logo {
+    flex: 2;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.app-content {
+    display: flex;
+    background-image: url('/assets/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    
+}
+.item-left {
+    flex: 1;
+    padding: 1%;
+}
+.item-right {
+    flex: 5;
+    padding: 1%;
+}
+

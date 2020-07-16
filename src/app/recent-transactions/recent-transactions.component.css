@@ -1,0 +1,80 @@
+.header {
+    display: flex;
+    background-color: #1180aa;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    flex: 1;
+    padding-left: 15px;
+}
+.heading {
+    flex: 1;
+    color: white;
+    height: 50px;
+    padding-top: 0.5%;
+}
+
+.transaction-contents {
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+.actions {
+    display: flex;
+    padding: 15px;
+}
+.action {
+    flex: 1;
+    display: flex;
+}
+.act-1 {
+    flex: 1;
+    display: flex;
+}
+.act-2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+}
+.act-field {
+    flex: 2;    
+}
+.cap {
+    text-transform: uppercase;
+}
+
+.data-row {
+    display: flex;
+    border-style: groove;
+    height: 50px;
+    border-width: thin;
+    align-content: center;
+}
+.data-item {
+    flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.color {
+    width: 20px;
+}
+
+.color-col {
+    flex: 0;
+    margin-right: 30px;
+}
+
+.merchant-name {
+    display: flex;
+    flex-direction: column;
+}
+.merchant-type {
+    flex: 1;
+}
+.merchant-logo {
+    width: 40px;
+    height: 30px;
+}

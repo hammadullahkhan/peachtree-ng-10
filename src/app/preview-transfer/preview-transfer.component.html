@@ -1,0 +1,29 @@
+<div class="transfer">
+
+    <div class="transfer-header">
+        <div class="logo"><img src="./assets/icons/arrows.png"></div>
+        <div class="heading">Preview Transfer</div>
+    </div>
+    <div class="transfer-content">
+
+        <div class="field">
+            <div class="field-item field-label"><label for="name">From Account</label></div>
+            <div class="field-item field-input"><input type="number" placeholder="${{transfer.fromAccountBalance}}" disabled></div>
+        </div>
+        <div class="field">
+            <div class="field-item field-label"><label for="name">To Account</label></div>
+            <div class="field-item field-input"><input type="text" placeholder="{{transfer.toAccount}}" disabled></div>
+        </div>
+        <div class="field">
+            <div class="field-item field-label"><label for="name">Amount</label></div>
+            <div class="field-item field-input input-group">
+                <span class="input-group-addon">$</span>
+                <input type="number" placeholder="{{transfer.amount}}" disabled>
+            </div>
+        </div>
+        <div class="field submit">
+            <button class="btn-submit" (click)="transferMoney()">Transfer</button>
+        </div>
+    </div>
+
+</div>

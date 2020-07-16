@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    padding: 1px;
+}
+
+input[type="text"], input[type="number"], input[type="search"] {
+    width: 98%;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: thin;  
+    height: 30px;
+    font-size: medium;  
+}
+
+*:focus {
+    outline: none;
+}
