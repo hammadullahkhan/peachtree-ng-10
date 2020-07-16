@@ -27,14 +27,23 @@
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
+
+    
     
 }
 .item-left {
     flex: 1;
     padding: 1%;
+
+    
 }
 .item-right {
     flex: 5;
     padding: 1%;
 }
 
+.make-transfer {       
+}
+
+.preview-transfer {
+}

@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit(): void {    
     this.data.currentMessage.subscribe(message => {
-      console.log('app', message);
+      // console.log('app', message);
       this.isPreview = (message) ? message.isPreview : false;
     })
   }

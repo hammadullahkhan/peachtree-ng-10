@@ -6,11 +6,11 @@
 
   <div class="app-content">
 
-    <div class="item-left make-transfer" *ngIf="!isPreview">
+    <div class="item-left" *ngIf="!isPreview" [ngClass]="{'make-transfer': !isPreview}">
       <app-make-transfer></app-make-transfer>
     </div>
 
-    <div class="item-left preview-transfer" *ngIf="isPreview">
+    <div class="item-left" *ngIf="isPreview" [ngClass]="{'preview-transfer': isPreview}">
       <app-preview-transfer></app-preview-transfer>
     </div>
 

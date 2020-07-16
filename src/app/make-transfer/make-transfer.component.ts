@@ -40,8 +40,10 @@ export class MakeTransferComponent implements OnInit {
   }
 
   submit() {
-    this.transfer.isPreview = true;
-    this.data.changeMessage(this.transfer);
+    if ( this.transfer.amount > 0 ) {
+      this.transfer.isPreview = true;
+      this.data.changeMessage(this.transfer);
+    }    
   }
 
 }
