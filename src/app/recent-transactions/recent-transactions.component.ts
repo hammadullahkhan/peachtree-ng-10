@@ -1,10 +1,8 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 
-// import MockedTransactions from '../../assets/mock/transactions.json';
-import { ITransaction } from '../models/transaction.model';
-
-import { DataService } from "../services/data.service";
-import { MappingService } from "../services/mapping.service";
+import { ITransaction } from '../shared/models/transaction.model';
+import { DataService } from "../shared/services/data.service";
+import { MappingService } from "../shared/services/mapping.service";
 
 @Component({
   selector: 'app-recent-transactions',
@@ -17,7 +15,6 @@ export class RecentTransactionsComponent implements OnInit {
   search: string;
   isDesc: boolean = false;
   sortColumn: string = 'transactionDate';
-  sortIcon: string = '';
   
   constructor(private data: DataService, private mapService: MappingService) { }
 
@@ -26,25 +23,23 @@ export class RecentTransactionsComponent implements OnInit {
     this.listenTransfers();
   }
 
-  loadData() {
+  loadData(): void {
     this.transactions = this.mapService.loadMockedData();
-    console.log(this.transactions);
+    // console.log(this.transactions);
   }
 
-  listenTransfers() {
+  listenTransfers(): void {
     this.data.currentMessage.subscribe(message => {
       if (message && !message.isPreview) {
         const trans = this.mapService.mapTransferToTransactions(message);
         this.transactions.unshift(trans);
-        console.log(this.transactions)
+        // console.log(this.transactions)
       }      
     });
   }
 
-  setSortColumn(colName) {
+  setSortColumn(colName: string): void {
     this.sortColumn = colName;
     this.isDesc = !this.isDesc;
-    this.sortIcon = this.isDesc ? "&#9660;" : "&#9650;";
-    console.log(this.sortColumn, this.isDesc);
   }
 }

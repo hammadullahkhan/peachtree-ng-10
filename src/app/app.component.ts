@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ITransfer } from './models/transfer.model';
-import { DataService } from "./services/data.service";
+import { DataService } from "./shared//services/data.service";
 
 @Component({
   selector: 'app-root',

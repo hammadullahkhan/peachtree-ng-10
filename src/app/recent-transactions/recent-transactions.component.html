@@ -7,24 +7,27 @@
 
     <div class="transaction-contents">
         <div class="actions">
-            <div class="action act-1">
+            <div class="action-filter">
                 <input type="text" [(ngModel)]="search" placeholder="Search by typing...">
-            </div>
-            <div class="action act-2">
-                <div class="act-field">Sort by</div>
-                <div class="act-field cap" (click)="setSortColumn('transactionDate')">Date
+            </div>            
+            <div class="action-sort">
+                <div class="sort-by">Sort by</div>
+                <div class="sort-fields" (click)="setSortColumn('transactionDate')">Date
                     <span *ngIf="sortColumn == 'transactionDate'">
-                        <sup>{{sortIcon}}</sup>
+                        <sup *ngIf="isDesc">&#9660;</sup>
+                        <sup *ngIf="!isDesc">&#9650;</sup>
                     </span>
                 </div>
-                <div class="act-field cap" (click)="setSortColumn('merchant')">Beneficiary
+                <div class="sort-fields" (click)="setSortColumn('merchant')">Beneficiary
                     <span *ngIf="sortColumn == 'merchant'">
-                        <sup>{{sortIcon}}</sup>
+                        <sup *ngIf="isDesc">&#9660;</sup>
+                        <sup *ngIf="!isDesc">&#9650;</sup>
                     </span>
                 </div>
-                <div class="act-field cap" (click)="setSortColumn('amount')">Amount
+                <div class="sort-fields" (click)="setSortColumn('amount')">Amount
                     <span *ngIf="sortColumn == 'amount'">
-                        <sup>{{sortIcon}}</sup>
+                        <sup *ngIf="isDesc">&#9660;</sup>
+                        <sup *ngIf="!isDesc">&#9650;</sup>
                     </span>
                 </div>
             </div>
@@ -36,11 +39,13 @@
                 <div class="data-item color-col" style="background-color: {{item.categoryCode}};">&nbsp;&nbsp;</div>
                 <div class="data-item">{{item.transactionDate | date:'MMM dd'}}</div>
                 <div class="data-item"><img src="{{item.merchantLogo}}" class="merchant-logo"></div>
-                <div class="data-item merchant-name">
-                    {{item.merchant}}
-                    <div class="merchant-type">{{item.transactionType}}</div>                
+                <div class="data-item">
+                    <div class="merchant-info">
+                        <div class="merchant-name">{{item.merchant}}</div>
+                        <div class="transaction-type">{{item.transactionType}}</div>
+                    </div>                    
                 </div>
-                <div class="data-item">{{item.amount | currency}}</div>
+                <div class="data-item amount">{{item.amount | currency}}</div>
                 
             </div>
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ITransfer } from '../models/transfer.model';
-import { DataService } from "../services/data.service";
+import { ITransfer } from '../shared/models/transfer.model';
+import { DataService } from "../shared/services/data.service";
 
 @Component({
   selector: 'app-make-transfer',
@@ -16,19 +16,25 @@ export class MakeTransferComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.resetProperties();
+    this.init();
+    this.listenTransfers();
+  }
+
+  listenTransfers(): void {
     this.data.currentMessage.subscribe(message => {
       if (message && !message.isPreview){
         this.transfer = message;
         this.transfer.amount = 0;
+        // console.log('make', this.transfer)
+      }  
+      // if (message && !message.isPreview)   {
+      //   this.init();  
+      // }
 
-        console.log('make', this.transfer)
-      }
-      
-    })    
+    });
   }
 
-  resetProperties() {
+  init(): void {
     this.transfer = {    
       fromAccountBalance: 5824.76,
       fromAccount: 'Free Checking(4692) - $',
@@ -36,10 +42,9 @@ export class MakeTransferComponent implements OnInit {
       amount: 0.00,
       isPreview: false
     }
-    // console.log(this.transfer)
   }
 
-  submit() {
+  submit(): void {
     if ( this.transfer.amount > 0 ) {
       this.transfer.isPreview = true;
       this.data.changeMessage(this.transfer);

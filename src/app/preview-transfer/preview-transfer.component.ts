@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ITransfer } from '../models/transfer.model';
-import { DataService } from "../services/data.service";
+import { ITransfer } from '../shared/models/transfer.model';
+import { DataService } from "../shared/services/data.service";
 
 @Component({
   selector: 'app-preview-transfer',
@@ -21,7 +21,7 @@ export class PreviewTransferComponent implements OnInit {
     });
   }
 
-  transferMoney() {
+  transferMoney(): void {
     this.transfer.isPreview = false;
     const dif = +(this.transfer.fromAccountBalance - this.transfer.amount).toFixed(2);
     this.transfer.fromAccountBalance = dif >= 500 ? dif : this.transfer.fromAccountBalance;

@@ -7,18 +7,18 @@
     <div class="transfer-content">
 
         <div class="field">
-            <div class="field-item field-label"><label for="name">From Account</label></div>
-            <div class="field-item field-input"><input type="number" placeholder="Free Checking(4692) - ${{transfer.fromAccountBalance}}" disabled></div>
+            <div class="field-item field-label"><label for="fromAccountBalance">From Account</label></div>
+            <div class="field-item field-input"><input type="number" id="fromAccountBalance" name="fromAccountBalance" placeholder="Free Checking(4692) - ${{transfer.fromAccountBalance}}" disabled></div>
         </div>
         <div class="field">
-            <div class="field-item field-label"><label for="name">To Account</label></div>
-            <div class="field-item field-input"><input type="text" [(ngModel)]="transfer.toAccount" placeholder="{{transfer.toAccount}}"></div>
+            <div class="field-item field-label"><label for="toAccount">To Account</label></div>
+            <div class="field-item field-input"><input type="text" id="toAccount" name="toAccount" [(ngModel)]="transfer.toAccount" placeholder="{{transfer.toAccount}}"></div>
         </div>
         <div class="field">
-            <div class="field-item field-label"><label for="name">Amount</label></div>
+            <div class="field-item field-label"><label for="amount">Amount</label></div>
             <div class="field-item field-input input-group">
                 <span class="input-group-addon">$</span>
-                <input type="number" [(ngModel)]="transfer.amount" placeholder="{{transfer.amount}}">
+                <input type="number" id="amount" name="amount" [(ngModel)]="transfer.amount" placeholder="{{transfer.amount}}">
             </div>
         </div>
         <div class="field submit">

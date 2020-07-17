@@ -15,7 +15,9 @@
 .heading {
     flex: 2;
     color: white;
-    height: 35px;
+    height: 40px;
+    font-family: 'Kanit-Light';
+    font-size: larger;
 }
 
 .transfer-content {
@@ -32,7 +34,7 @@
 }
 .field-label {
     text-transform: uppercase;
-    font-weight: 800;
+    font-family: 'Kanit-Medium';
 }
 .field-item {
     margin: 3%;

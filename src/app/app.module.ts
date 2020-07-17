@@ -2,15 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MakeTransferComponent } from './make-transfer/make-transfer.component';
 import { RecentTransactionsComponent } from './recent-transactions/recent-transactions.component';
 import { PreviewTransferComponent } from './preview-transfer/preview-transfer.component';
-import { DataService } from './services/data.service';
-import { TransactionsFilterPipe } from './pipes/transactions-filter.pipe';
-import { TransactionsSortPipe } from './pipes/transactions-sort.pipe';
-import { MappingService } from './services/mapping.service';
+import { DataService } from './shared/services/data.service';
+import { TransactionsFilterPipe } from './shared/pipes/transactions-filter.pipe';
+import { TransactionsSortPipe } from './shared/pipes/transactions-sort.pipe';
+import { MappingService } from './shared/services/mapping.service';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { MappingService } from './services/mapping.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [DataService, MappingService],
   bootstrap: [AppComponent]

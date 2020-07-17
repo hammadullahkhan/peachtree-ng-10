@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import MockedTransactions from '../../assets/mock/transactions.json';
+import MockedTransactions from '../../../assets/mock/transactions.json';
 import { ITransaction } from '../models/transaction.model';
 
 @Injectable({
