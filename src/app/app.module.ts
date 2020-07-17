@@ -8,7 +8,8 @@ import { MakeTransferComponent } from './make-transfer/make-transfer.component';
 import { RecentTransactionsComponent } from './recent-transactions/recent-transactions.component';
 import { PreviewTransferComponent } from './preview-transfer/preview-transfer.component';
 import { DataService } from './services/data.service';
-import { TransactionsPipe } from './pipes/transactions.pipe';
+import { TransactionsFilterPipe } from './pipes/transactions-filter.pipe';
+import { TransactionsSortPipe } from './pipes/transactions-sort.pipe';
 import { MappingService } from './services/mapping.service';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MappingService } from './services/mapping.service';
     MakeTransferComponent,
     RecentTransactionsComponent,
     PreviewTransferComponent,
-    TransactionsPipe
+    TransactionsFilterPipe,
+    TransactionsSortPipe
   ],
   imports: [
     BrowserModule,

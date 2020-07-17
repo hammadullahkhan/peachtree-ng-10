@@ -2,7 +2,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'transactionsFilter', pure: false})
-export class TransactionsPipe implements PipeTransform {
+export class TransactionsFilterPipe implements PipeTransform {
 
   transform(transactions: any, searchText: any): any {
     if(searchText == null) return transactions;

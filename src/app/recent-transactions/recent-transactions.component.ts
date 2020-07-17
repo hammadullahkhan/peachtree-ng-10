@@ -14,7 +14,10 @@ import { MappingService } from "../services/mapping.service";
 export class RecentTransactionsComponent implements OnInit {
 
   transactions: ITransaction[];
-  searchMerchant: string;
+  search: string;
+  isDesc: boolean = false;
+  sortColumn: string = 'transactionDate';
+  sortIcon: string = '';
   
   constructor(private data: DataService, private mapService: MappingService) { }
 
@@ -25,6 +28,7 @@ export class RecentTransactionsComponent implements OnInit {
 
   loadData() {
     this.transactions = this.mapService.loadMockedData();
+    console.log(this.transactions);
   }
 
   listenTransfers() {
@@ -35,5 +39,12 @@ export class RecentTransactionsComponent implements OnInit {
         console.log(this.transactions)
       }      
     });
+  }
+
+  setSortColumn(colName) {
+    this.sortColumn = colName;
+    this.isDesc = !this.isDesc;
+    this.sortIcon = this.isDesc ? "&#9660;" : "&#9650;";
+    console.log(this.sortColumn, this.isDesc);
   }
 }
