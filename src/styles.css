@@ -3,14 +3,8 @@
 body {
     margin: 0;
     padding: 1px;
-    font-family: 'Kanit-Light', sans-serif;
+    font-family: 'Kanit-Light', sans-serif;    
 }
-
-/* @font-face {
-    font-family: 'Kanit';
-    src: url(/assets/Kanit/Kanit-Light.ttf) format("truetype");
-    font-weight:300;
-} */
 
 input[type="text"], input[type="number"], input[type="search"] {
     width: 98%;

@@ -25,6 +25,7 @@
 .actions {
     display: flex;
     padding: 15px;
+    align-self: center;
 }
 .action-filter {
     flex: 1;
@@ -44,8 +45,9 @@
     padding-right: 30px;
 }
 .sort-fields {
-    flex: 0.7;
-    flex-grow: 1;
+    flex: 4;
+    flex-grow: 2;
+    flex-shrink: 2;
     text-transform: uppercase;
     font-family: 'Kanit-Light';
     font-weight: 600;
@@ -53,22 +55,25 @@
     border-width: thin;
     border-color: #AAAAAA;
     flex-basis: auto;
-    text-align: center;    
+    text-align: center;   
+    cursor: pointer; 
 }
 
 
 .data-row {
     display: flex;
     border-style: solid;
-    height: 50px;
     border-width: thin;
     align-content: center;
     border-color: #AAAAAA;
 }
 .data-item {
-    flex: 1;
+    flex: 0.2;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 22px;
+}
+.align-content-center {
     align-self: center;
 }
 .color {
@@ -79,6 +84,7 @@
     flex: 0;
     margin-right: 30px;
 }
+
 
 .merchant-name {
     display: flex;
@@ -95,15 +101,25 @@
     font-size: small;
 }
 .merchant-logo {
-    width: 40px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
+}
+.amount {
+    font-family: 'Kanit-Medium';
+    font-size: large;
+}
+.col-left {    
+    text-align: left;
+}
+.col-right {
+    text-align: right;
+    flex: 0.5;
+    padding-right: 50px;
 }
 
-.amount {
-    font-family: 'Kanit-Bold';
-}
+
 
 sup {
-    vertical-align: super;
-    font-size: smaller;
+    vertical-align:text-top;
+    font-size: x-small;
 }

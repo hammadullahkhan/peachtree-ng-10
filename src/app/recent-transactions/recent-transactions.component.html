@@ -37,15 +37,15 @@
             <div *ngFor="let item of transactions | transactionsFilter:search | transactionsSort:sortColumn:isDesc" class="data-row">
                 
                 <div class="data-item color-col" style="background-color: {{item.categoryCode}};">&nbsp;&nbsp;</div>
-                <div class="data-item">{{item.transactionDate | date:'MMM dd'}}</div>
-                <div class="data-item"><img src="{{item.merchantLogo}}" class="merchant-logo"></div>
-                <div class="data-item">
+                <div class="data-item col-left align-content-center">{{item.transactionDate | date:'MMM dd'}}</div>
+                <div class="data-item align-content-center"><img src="{{item.merchantLogo}}" class="merchant-logo"></div>
+                <div class="data-item align-content-center">
                     <div class="merchant-info">
                         <div class="merchant-name">{{item.merchant}}</div>
                         <div class="transaction-type">{{item.transactionType}}</div>
                     </div>                    
                 </div>
-                <div class="data-item amount">{{item.amount | currency}}</div>
+                <div class="data-item align-content-center col-right amount">{{item.amount | currency}}</div>
                 
             </div>
 
