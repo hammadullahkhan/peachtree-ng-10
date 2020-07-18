@@ -13,7 +13,7 @@ export class RecentTransactionsComponent implements OnInit {
 
   transactions: ITransaction[];
   search: string;
-  isDesc: boolean = false;
+  isDesc: boolean = true;
   sortColumn: string = 'transactionDate';
   
   constructor(private data: DataService, private mapService: MappingService) { }
@@ -33,7 +33,7 @@ export class RecentTransactionsComponent implements OnInit {
       if (message && !message.isPreview) {
         const trans = this.mapService.mapTransferToTransactions(message);
         this.transactions.unshift(trans);
-        // console.log(this.transactions)
+        // console.log('transactions', this.transactions)
       }      
     });
   }

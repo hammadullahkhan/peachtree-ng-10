@@ -8,7 +8,8 @@
     <div class="transaction-contents">
         <div class="actions">
             <div class="action-filter">
-                <input type="text" [(ngModel)]="search" placeholder="Search by typing...">
+                <input type="text" #src [(ngModel)]="search" placeholder="Search by typing...">
+                <div *ngIf="src.value.length > 0" class="search-cross" (click)="src.value = ''">X</div>
             </div>            
             <div class="action-sort">
                 <div class="sort-by">Sort by</div>
@@ -34,7 +35,7 @@
         </div>
 
         <div class="tabular-data">
-            <div *ngFor="let item of transactions | transactionsFilter:search | transactionsSort:sortColumn:isDesc" class="data-row">
+            <div *ngFor="let item of transactions | transactionsFilter:src.value | transactionsSort:sortColumn:isDesc" class="data-row">
                 
                 <div class="data-item color-col" style="background-color: {{item.categoryCode}};">&nbsp;&nbsp;</div>
                 <div class="data-item col-left align-content-center">{{item.transactionDate | date:'MMM dd'}}</div>

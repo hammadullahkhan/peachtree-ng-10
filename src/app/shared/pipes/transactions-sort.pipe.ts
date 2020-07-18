@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'transactionsSort'})
+@Pipe({ name: 'transactionsSort', pure: false})
 export class TransactionsSortPipe implements PipeTransform {
 
   transform(value: any[], sortKey: string, orderType: boolean): any {

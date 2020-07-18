@@ -17,6 +17,9 @@
     font-size: larger;
 }
 
+.search-cross {
+    cursor: pointer;
+}
 
 .transaction-contents {
     padding: 15px;
@@ -59,7 +62,9 @@
     cursor: pointer; 
 }
 
-
+.tabular-data {
+    margin-top: 2%;
+}
 .data-row {
     display: flex;
     border-style: solid;

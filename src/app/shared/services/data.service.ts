@@ -7,14 +7,14 @@ import { ITransfer } from '../models/transfer.model';
 export class DataService {
 
     transfer: ITransfer;
-    private messageSource = new BehaviorSubject(this.transfer);
+    private messageSource = new BehaviorSubject(this.transfer);    
     currentMessage = this.messageSource.asObservable();
 
     constructor() { }
 
     changeMessage(message: ITransfer) {
         this.messageSource.next(message);
-        console.log('message', message)
+        // console.log('message', message)
     }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ITransfer } from '../shared/models/transfer.model';
 import { DataService } from "../shared/services/data.service";
+import { MappingService } from "../shared/services/mapping.service";
 
 @Component({
   selector: 'app-make-transfer',
@@ -12,36 +13,24 @@ export class MakeTransferComponent implements OnInit {
 
   transfer: ITransfer;
 
-  constructor(private data: DataService) {         
+  constructor(private data: DataService, private mappingService: MappingService) {         
   }
 
   ngOnInit(): void {
-    this.init();
+    this.initProperties();
     this.listenTransfers();
   }
 
   listenTransfers(): void {
     this.data.currentMessage.subscribe(message => {
-      if (message && !message.isPreview){
-        this.transfer = message;
-        this.transfer.amount = 0;
-        // console.log('make', this.transfer)
-      }  
-      // if (message && !message.isPreview)   {
-      //   this.init();  
-      // }
-
+      if (message && !message.isPreview)   {
+        this.initProperties();  
+      }
     });
   }
 
-  init(): void {
-    this.transfer = {    
-      fromAccountBalance: 5824.76,
-      fromAccount: 'Free Checking(4692) - $',
-      toAccount: 'Georgia Power Electric Company',
-      amount: 0.00,
-      isPreview: false
-    }
+  initProperties(): void {
+    this.transfer = this.mappingService.initTransfer();
   }
 
   submit(): void {

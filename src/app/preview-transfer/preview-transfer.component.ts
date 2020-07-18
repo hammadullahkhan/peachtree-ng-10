@@ -16,8 +16,13 @@ export class PreviewTransferComponent implements OnInit {
   }
 
   ngOnInit(): void {    
+    this.listenTransfers();
+  }
+
+  listenTransfers(): void {
     this.data.currentMessage.subscribe(message => {
-      this.transfer = message; console.log('preview', this.transfer)
+      this.transfer = message; 
+      // console.log('preview', this.transfer)
     });
   }
 
