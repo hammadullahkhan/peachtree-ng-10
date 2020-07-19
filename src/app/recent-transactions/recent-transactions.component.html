@@ -2,30 +2,34 @@
 
     <div class="header">
         <div class="logo"><img src="./assets/icons/briefcase.png"></div>
-        <div class="heading">Recent Transactions</div>
+        <div class="heading" i18n="Title for the Recent Transactions card@@RecentTransactionHeader">Recent Transactions</div>
     </div>
 
     <div class="transaction-contents">
         <div class="actions">
             <div class="action-filter">
-                <input type="text" #src [(ngModel)]="search" placeholder="Search by typing...">
+                <input type="text" #src [(ngModel)]="search" placeholder="Search by typing..." i18n-placeholder="Placeholder for Search filter@@SearchFilter">
                 <div *ngIf="src.value.length > 0" class="search-cross" (click)="src.value = ''">X</div>
             </div>            
             <div class="action-sort">
-                <div class="sort-by">Sort by</div>
-                <div class="sort-fields" (click)="setSortColumn('transactionDate')">Date
+                <div class="sort-by" i18n="Label for Sort by@@SortBy">Sort by</div>
+                <div class="sort-fields" (click)="setSortColumn('transactionDate')">
+                    <div i18n="Label for sortby Date@@SortByDate">Date</div>
                     <span *ngIf="sortColumn == 'transactionDate'">
+                        <!-- TODO: need to make this better -->
                         <sup *ngIf="isDesc">&#9660;</sup>
                         <sup *ngIf="!isDesc">&#9650;</sup>
                     </span>
                 </div>
-                <div class="sort-fields" (click)="setSortColumn('merchant')">Beneficiary
+                <div class="sort-fields" (click)="setSortColumn('merchant')">
+                    <div i18n="Label for sortby Beneficiary@@SortbyBenificiary">Beneficiary</div>
                     <span *ngIf="sortColumn == 'merchant'">
                         <sup *ngIf="isDesc">&#9660;</sup>
                         <sup *ngIf="!isDesc">&#9650;</sup>
                     </span>
                 </div>
-                <div class="sort-fields" (click)="setSortColumn('amount')">Amount
+                <div class="sort-fields" (click)="setSortColumn('amount')">
+                    <div i18n="Label for sortby Amount@@SortbyAmount">Amount</div>
                     <span *ngIf="sortColumn == 'amount'">
                         <sup *ngIf="isDesc">&#9660;</sup>
                         <sup *ngIf="!isDesc">&#9650;</sup>
@@ -46,10 +50,8 @@
                         <div class="transaction-type">{{item.transactionType}}</div>
                     </div>                    
                 </div>
-                <div class="data-item align-content-center col-right amount">{{item.amount | currency}}</div>
-                
+                <div class="data-item align-content-center col-right amount">{{item.amount | currency}}</div>                
             </div>
-
         </div>
 
     </div>

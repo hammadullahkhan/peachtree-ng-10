@@ -2,27 +2,27 @@
 
     <div class="transfer-header">
         <div class="logo"><img src="./assets/icons/arrows.png"></div>
-        <div class="heading">Make a Transfer</div>
+        <div class="heading" i18n="Title for the Make Transfer card@@MakeTransferHeader">Make a Transfer</div>
     </div>
     <div class="transfer-content">
 
         <div class="field">
-            <div class="field-item field-label"><label for="fromAccountBalance">From Account</label></div>
+            <div class="field-item field-label"><label for="fromAccountBalance" i18n="Label for fromAccount@@FromAccount">From Account</label></div>
             <div class="field-item field-input"><input type="number" id="fromAccountBalance" name="fromAccountBalance" placeholder="Free Checking(4692) - ${{transfer.fromAccountBalance}}" disabled></div>
         </div>
         <div class="field">
-            <div class="field-item field-label"><label for="toAccount">To Account</label></div>
+            <div class="field-item field-label"><label for="toAccount" i18n="Label for ToAccount@@ToAccount">To Account</label></div>
             <div class="field-item field-input"><input type="text" id="toAccount" name="toAccount" [(ngModel)]="transfer.toAccount" placeholder="{{transfer.toAccount}}"></div>
         </div>
         <div class="field">
-            <div class="field-item field-label"><label for="amount">Amount</label></div>
+            <div class="field-item field-label"><label for="amount" i18n="Label for Amount field@@Amount">Amount</label></div>
             <div class="field-item field-input input-group">
                 <span class="input-group-addon">$</span>
                 <input type="number" id="amount" name="amount" [(ngModel)]="transfer.amount" placeholder="{{transfer.amount}}">
             </div>
         </div>
         <div class="field submit">
-            <button class="btn-submit" (click)="submit()">Submit</button>
+            <button class="btn-submit" (click)="submit()" i18n="Label for Submit button@@SubmitButton">Submit</button>
         </div>
     </div>
 

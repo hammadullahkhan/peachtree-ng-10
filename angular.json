@@ -9,15 +9,22 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": "src/i18n/messages.fr.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/peachtree-bank",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize": true,
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -30,6 +37,9 @@
             "scripts": []
           },
           "configurations": {
+            "fr": {
+              "localize": ["fr"]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -68,6 +78,9 @@
           "configurations": {
             "production": {
               "browserTarget": "peachtree-bank:build:production"
+            },
+            "fr": {
+              "browserTarget": "peachtree-bank:build:fr"
             }
           }
         },
@@ -76,7 +89,7 @@
           "options": {
             "browserTarget": "peachtree-bank:build"
           }
-        },
+        },        
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
