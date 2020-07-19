@@ -11,7 +11,7 @@
       "prefix": "app",
       "i18n": {
         "sourceLocale": "en-US",
-        "locales": {
+        "locales": {          
           "fr": "src/i18n/messages.fr.xlf"
         }
       },
@@ -24,7 +24,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "localize": true,
+            
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -78,6 +78,9 @@
           "configurations": {
             "production": {
               "browserTarget": "peachtree-bank:build:production"
+            },
+            "en-US": {
+              "browserTarget": "peachtree-bank:build:en-US"
             },
             "fr": {
               "browserTarget": "peachtree-bank:build:fr"

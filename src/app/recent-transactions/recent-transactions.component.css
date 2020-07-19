@@ -46,10 +46,13 @@
     flex-basis: auto;
     text-align: right;
     padding-right: 30px;
+    align-self: center;
 }
 .sort-fields {
-    flex: 4;
-    flex-grow: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 5;
     flex-shrink: 2;
     text-transform: uppercase;
     font-family: 'Kanit-Light';
@@ -58,8 +61,11 @@
     border-width: thin;
     border-color: #AAAAAA;
     flex-basis: auto;
-    text-align: center;   
-    cursor: pointer; 
+    text-align: center;
+    cursor: pointer;
+}
+.sort-labels {
+    margin-right: 5px;
 }
 
 .tabular-data {

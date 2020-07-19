@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import MockedTransactions from '../../../assets/mock/transactions.json';
+import { DataService } from "./data.service";
+
 import { ITransaction } from '../models/transaction.model';
 import { ITransfer } from '../models/transfer.model';
 
@@ -9,7 +11,7 @@ import { ITransfer } from '../models/transfer.model';
 })
 export class MappingService {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   loadMockedData() {
     // console.log(MockedTransactions.data)
@@ -42,6 +44,15 @@ export class MappingService {
       isPreview: false
     };
     return transfer;
+  }
+
+  transferMoney(transfer: ITransfer) {
+
+    transfer.isPreview = false;
+    const dif = +(transfer.fromAccountBalance - transfer.amount).toFixed(2);
+    transfer.fromAccountBalance = dif >= 500 ? dif : transfer.fromAccountBalance;
+    this.dataService.changeMessage(transfer);
+
   }
 
 }

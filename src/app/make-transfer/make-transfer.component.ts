@@ -13,7 +13,7 @@ export class MakeTransferComponent implements OnInit {
 
   transfer: ITransfer;
 
-  constructor(private data: DataService, private mappingService: MappingService) {         
+  constructor(private dataService: DataService, private mappingService: MappingService) {         
   }
 
   ngOnInit(): void {
@@ -22,7 +22,7 @@ export class MakeTransferComponent implements OnInit {
   }
 
   listenTransfers(): void {
-    this.data.currentMessage.subscribe(message => {
+    this.dataService.currentMessage.subscribe(message => {
       if (message && !message.isPreview)   {
         this.initProperties();  
       }
@@ -36,7 +36,7 @@ export class MakeTransferComponent implements OnInit {
   submit(): void {
     if ( this.transfer.amount > 0 ) {
       this.transfer.isPreview = true;
-      this.data.changeMessage(this.transfer);
+      this.dataService.changeMessage(this.transfer);
     }    
   }
 

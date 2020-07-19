@@ -14,7 +14,7 @@
             <div class="action-sort">
                 <div class="sort-by" i18n="Label for Sort by@@SortBy">Sort by</div>
                 <div class="sort-fields" (click)="setSortColumn('transactionDate')">
-                    <div i18n="Label for sortby Date@@SortByDate">Date</div>
+                    <div class="sort-labels" i18n="Label for sortby Date@@SortByDate">Date</div>
                     <span *ngIf="sortColumn == 'transactionDate'">
                         <!-- TODO: need to make this better -->
                         <sup *ngIf="isDesc">&#9660;</sup>
@@ -22,14 +22,14 @@
                     </span>
                 </div>
                 <div class="sort-fields" (click)="setSortColumn('merchant')">
-                    <div i18n="Label for sortby Beneficiary@@SortbyBenificiary">Beneficiary</div>
+                    <div class="sort-labels" i18n="Label for sortby Beneficiary@@SortbyBenificiary">Beneficiary</div>
                     <span *ngIf="sortColumn == 'merchant'">
                         <sup *ngIf="isDesc">&#9660;</sup>
                         <sup *ngIf="!isDesc">&#9650;</sup>
                     </span>
                 </div>
                 <div class="sort-fields" (click)="setSortColumn('amount')">
-                    <div i18n="Label for sortby Amount@@SortbyAmount">Amount</div>
+                    <div class="sort-labels" i18n="Label for sortby Amount@@SortbyAmount">Amount</div>
                     <span *ngIf="sortColumn == 'amount'">
                         <sup *ngIf="isDesc">&#9660;</sup>
                         <sup *ngIf="!isDesc">&#9650;</sup>
