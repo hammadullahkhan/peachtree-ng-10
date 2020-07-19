@@ -30,6 +30,12 @@
     background-color: #464646;
 }
 
+@media (min-width:280px) and (max-width:1025px)  { 
+    .app-content {
+        flex-direction: column;
+    }
+}
+
 .item-left {
     flex: 1;
     padding: 1%;
@@ -40,8 +46,3 @@
     padding: 1%;
 }
 
-.make-transfer {       
-}
-
-.preview-transfer {
-}

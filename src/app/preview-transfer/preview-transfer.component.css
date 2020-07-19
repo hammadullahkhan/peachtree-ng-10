@@ -1,23 +1,23 @@
-.transfer {
-
-}
-
 .transfer-header {
     display: flex;
     background-color: #1180aa;
     justify-content: center;
     align-items: center;    
 }
-.logo {
-    flex: 1;
+.icon-container {
+    flex: 0;
     padding-left: 15px;
 }
+.icon-image {
+    mix-blend-mode: multiply;
+}
 .heading {
-    flex: 2;
+    flex: 12;
     color: white;
     height: 40px;    
-    font-family: 'Kanit-Light';
+    font-family: 'Kanit-Medium';
     font-size: larger;
+    text-align: center;
 }
 
 .transfer-content {

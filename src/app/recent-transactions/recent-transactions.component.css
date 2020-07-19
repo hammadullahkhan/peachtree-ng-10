@@ -4,17 +4,22 @@
     justify-content: center;
     align-items: center;
 }
-.logo {
-    flex: 1;
+.icon-container {
+    flex: 0;
     padding-left: 15px;
 }
+.icon-image {
+    mix-blend-mode: multiply;
+}
+
 .heading {
-    flex: 1;
+    flex: 12;
     color: white;
     height: 50px;
     padding-top: 0.5%;    
-    font-family: 'Kanit-Light';
+    font-family: 'Kanit-Medium';
     font-size: larger;
+    text-align: center;
 }
 
 .search-cross {
@@ -78,25 +83,22 @@
     align-content: center;
     border-color: #AAAAAA;
 }
+
 .data-item {
     flex: 0.2;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 22px;    
+    font-size: 22px;
 }
 .align-content-center {
     align-self: center;
 }
-.color {
-    width: 20px;
-}
-
 .color-col {
     flex: 0;
-    margin-right: 30px;
 }
-
-
+.merchant-info {
+    text-align: left;
+}
 .merchant-name {
     display: flex;
     flex-direction: column;
@@ -108,32 +110,61 @@
 }
 .transaction-type {
     flex: 1;
-    font-family: 'Kanit-SemiBold';
+    font-family: 'Kanit-Light';
     font-size: small;
+    font-weight: 600;
 }
 .merchant-logo {
     width: 50px;
-    height: 40px;    
 }
 .merchant-logo-box {
     display: inline-flex;
 }
 .amount {
     font-family: 'Kanit-Medium';
-    font-size: large;
+    font-size: larger;
 }
 .col-left {    
     text-align: left;
+    padding-left: 30px;
 }
 .col-right {
     text-align: right;
     flex: 0.5;
-    padding-right: 50px;
+    padding-right: 30px;
 }
-
-
-
 sup {
     vertical-align:text-top;
-    font-size: x-small;
+    font-size: small;
+}
+
+@media (min-width:280px) and (max-width:1025px)  { 
+    .data-row {
+        display: flex;
+        border-style: solid;
+        border-width: thin;
+        align-content: center;
+        border-color: #AAAAAA;
+        flex-direction: column;
+    }
+    .data-item {
+        flex: 0.2;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 22px;
+    }
+    .col-left {    
+        text-align: center;
+        padding-left: 0px;
+    }
+    .col-right {
+        text-align: center;
+        padding-right: 0px;
+    }
+    .merchant-info {
+        text-align: center;
+    }
+    .actions {
+        flex-direction: column;
+    }    
 }
