@@ -22,7 +22,7 @@ export class PreviewTransferComponent implements OnInit {
 
   listenTransfers(): void {
     this.dataService.currentMessage.subscribe(message => {
-      this.transfer = message; 
+      this.transfer = message;
       // console.log('preview', this.transfer)
     });
   }

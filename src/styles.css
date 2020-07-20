@@ -21,3 +21,19 @@ input[type="text"], input[type="number"], input[type="search"] {
 *:focus {
     outline: none;
 }
+
+input:focus::-webkit-input-placeholder {
+    color:transparent;
+ }
+ 
+ input:focus:-moz-placeholder { /* Firefox 18- */
+    color:transparent; 
+ }
+ 
+ input:focus::-moz-placeholder {  /* Firefox 19+ */
+    color:transparent; 
+ }
+ 
+ input:focus:-ms-input-placeholder {  
+    color:transparent;
+ }

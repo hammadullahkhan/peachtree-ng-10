@@ -16,15 +16,19 @@ export class MappingService {
   loadMockedData() {
     // console.log(MockedTransactions.data)
     let transactions:ITransaction[] = Object.assign([], MockedTransactions.data);
-    transactions.forEach( item => item.amount *= -1);
+    transactions.forEach( item => {
+      const amount = +item.amount;
+      item.amount = (amount * -1).toFixed(2);
+    });
     return transactions;
   }
 
   mapTransferToTransactions(message): ITransaction {
 
+    const amount = +message.amount;
     const trans: ITransaction = {
         // amount: message.amount,
-        amount:  message.amount * -1,
+        amount:  (amount * -1).toFixed(2),
         categoryCode: "#d51271",
         transactionType: 'Transfer',
         merchant: message.toAccount,
@@ -34,25 +38,28 @@ export class MappingService {
     return trans;
   }
 
-  initTransfer(): ITransfer {
+  initProperties(): ITransfer {
 
     const transfer: ITransfer = {    
       fromAccountBalance: 5824.76,
       fromAccount: 'Free Checking(4692) - $',
       toAccount: 'Georgia Power Electric Company',
-      amount: 0.00,
+      amount: "0.00",
       isPreview: false
-    };
+    };    
+    console.log(transfer)
     return transfer;
   }
 
   transferMoney(transfer: ITransfer) {
 
+    // console.log('transfer', transfer)
     transfer.isPreview = false;
-    const dif = +(transfer.fromAccountBalance - transfer.amount).toFixed(2);
+    const amount = +transfer.amount;
+    const dif = +(transfer.fromAccountBalance - amount).toFixed(2);
     transfer.fromAccountBalance = dif >= 500 ? dif : transfer.fromAccountBalance;
     this.dataService.changeMessage(transfer);
-
+    console.log('transfer', transfer)
   }
 
 }

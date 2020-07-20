@@ -24,17 +24,20 @@ export class MakeTransferComponent implements OnInit {
   listenTransfers(): void {
     this.dataService.currentMessage.subscribe(message => {
       if (message && !message.isPreview)   {
-        this.initProperties();  
+        // this.initProperties();  
+        this.transfer = message;
+        this.transfer.amount = "0.00";
       }
     });
   }
 
   initProperties(): void {
-    this.transfer = this.mappingService.initTransfer();
+    this.transfer = this.mappingService.initProperties();
   }
 
   submit(): void {
-    if ( this.transfer.amount > 0 ) {
+    const amount = +this.transfer.amount;
+    if ( amount > 0 ) {
       this.transfer.isPreview = true;
       this.dataService.changeMessage(this.transfer);
     }    

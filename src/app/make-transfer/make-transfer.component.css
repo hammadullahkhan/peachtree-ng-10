@@ -9,14 +9,14 @@
     padding-left: 15px;
 }
 .icon-image {
-    mix-blend-mode: multiply;
+    mix-blend-mode: multiply;    
 }
 .heading {
     flex: 12;
     color: white;
     height: 40px;
-    font-family: 'Kanit-Medium';
-    font-size: larger;
+    font-family: 'Kanit-Light';
+    font-size: 22px;
     text-align: center;
 }
 
@@ -61,6 +61,9 @@
     width: 1%;
     white-space: nowrap;
     display: table-cell;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #AAAAAA;
 }
 
 .input-group {
