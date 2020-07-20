@@ -1,7 +1,7 @@
 <div class="transactions">
 
     <div class="header">
-        <div class="icon-container"><img class="icon-image" src="./assets/icons/briefcase.png"></div>
+        <div class="icon-container"><img class="icon-image" src="./assets/icons/briefcase.png" alt="icon-image"></div>
         <div class="heading" i18n="Title for the Recent Transactions card@@RecentTransactionHeader">Recent Transactions</div>
     </div>
 
@@ -43,7 +43,7 @@
                 
                 <div class="data-item color-col" style="background-color: {{item.categoryCode}};">&nbsp;&nbsp;</div>
                 <div class="data-item col-left align-content-center">{{item.transactionDate | date:'MMM dd'}}</div>
-                <div class="data-item align-content-center merchant-logo-box"><img src="{{item.merchantLogo}}" class="merchant-logo"></div>
+                <div class="data-item align-content-center merchant-logo-box"><img src="{{item.merchantLogo}}" class="merchant-logo" alt="merchant-logo"></div>
                 <div class="data-item align-content-center">
                     <div class="merchant-info">
                         <div class="merchant-name">{{item.merchant}}</div>

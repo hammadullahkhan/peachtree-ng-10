@@ -1,4 +1,4 @@
-.transfer-header {
+.header {
     display: flex;
     background-color: #1180aa;
     justify-content: center;
@@ -18,7 +18,9 @@
     font-family: 'Kanit-Light';
     font-size: 22px;
     text-align: center;
-}
+} 
+
+
 
 .transfer-content {
     display: flex;

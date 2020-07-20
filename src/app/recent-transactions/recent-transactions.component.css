@@ -11,7 +11,6 @@
 .icon-image {
     mix-blend-mode: multiply;
 }
-
 .heading {
     flex: 12;
     color: white;
@@ -32,7 +31,6 @@
 }
 .actions {
     display: flex;
-    padding: 15px;
     align-self: center;
 }
 .action-filter {
