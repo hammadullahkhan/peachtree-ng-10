@@ -1,5 +1,3 @@
-var $localize=Object.assign(void 0===$localize?{}:$localize,{locale:"en-US"});
-"use strict";(function(global){global.ng=global.ng||{};global.ng.common=global.ng.common||{};global.ng.common.locales=global.ng.common.locales||{};const u=undefined;function plural(n){let i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(i===1&&v===0)return 1;return 5}global.ng.common.locales["en-us-posix"]=["en-US-POSIX",[["a","p"],["AM","PM"],u],[["AM","PM"],u,u],[["S","M","T","W","T","F","S"],["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],["Su","Mo","Tu","We","Th","Fr","Sa"]],u,[["J","F","M","A","M","J","J","A","S","O","N","D"],["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],["January","February","March","April","May","June","July","August","September","October","November","December"]],u,[["B","A"],["BC","AD"],["Before Christ","Anno Domini"]],0,[6,0],["M/d/yy","MMM d, y","MMMM d, y","EEEE, MMMM d, y"],["h:mm a","h:mm:ss a","h:mm:ss a z","h:mm:ss a zzzz"],["{1}, {0}",u,"{1} 'at' {0}",u],[".",",",";","%","+","-","E","\xD7","0/00","INF","NaN",":"],["0.######","0%","\xA4\xA00.00","0.000000E+000"],"USD","$","US Dollar",{},"ltr",plural,[[["mi","n","in the morning","in the afternoon","in the evening","at night"],["midnight","noon","in the morning","in the afternoon","in the evening","at night"],u],[["midnight","noon","morning","afternoon","evening","night"],u,u],["00:00","12:00",["06:00","12:00"],["12:00","18:00"],["18:00","21:00"],["21:00","06:00"]]]]})(typeof globalThis!=="undefined"&&globalThis||typeof global!=="undefined"&&global||typeof window!=="undefined"&&window);;
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
 /***/ "./$$_lazy_route_resource lazy recursive":
@@ -211,7 +209,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_0 = MSG_EXTERNAL_MakeTransferHeader$$SRC_APP_MAKE_TRANSFER_MAKE_TRANSFER_COMPONENT_TS_1;
 }
 else {
-    I18N_0 = "Make a Transfer";
+    I18N_0 = $localize `:Title for the Make Transfer card@@MakeTransferHeader␟a42860a7a282ec6ca57db03dce54b87705ac301b␟2348618311038549074:Make a Transfer`;
 }
 var I18N_2;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -222,7 +220,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_2 = MSG_EXTERNAL_FromAccount$$SRC_APP_MAKE_TRANSFER_MAKE_TRANSFER_COMPONENT_TS_3;
 }
 else {
-    I18N_2 = "From Account";
+    I18N_2 = $localize `:Label for fromAccount@@FromAccount␟a9377fb734975cbf672296eb78be4146c0724480␟5859173719166354957:From Account`;
 }
 var I18N_4;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -233,7 +231,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_4 = MSG_EXTERNAL_ToAccount$$SRC_APP_MAKE_TRANSFER_MAKE_TRANSFER_COMPONENT_TS_5;
 }
 else {
-    I18N_4 = "To Account";
+    I18N_4 = $localize `:Label for ToAccount@@ToAccount␟e6a0156afb757d0a2ea410daf2f3a717ea6ebe37␟6295291551616731288:To Account`;
 }
 var I18N_6;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -244,7 +242,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_6 = MSG_EXTERNAL_Amount$$SRC_APP_MAKE_TRANSFER_MAKE_TRANSFER_COMPONENT_TS_7;
 }
 else {
-    I18N_6 = "Amount";
+    I18N_6 = $localize `:Label for Amount field@@Amount␟dfc2fb58e2a04ed944a4bd80f0a2087775134068␟6533918067030990396:Amount`;
 }
 var I18N_8;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -255,7 +253,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_8 = MSG_EXTERNAL_SubmitButton$$SRC_APP_MAKE_TRANSFER_MAKE_TRANSFER_COMPONENT_TS_9;
 }
 else {
-    I18N_8 = "Submit";
+    I18N_8 = $localize `:Label for Submit button@@SubmitButton␟71c77bb8cecdf11ec3eead24dd1ba506573fa9cd␟935187492052582731:Submit`;
 }
 class MakeTransferComponent {
     constructor(dataService, mappingService) {
@@ -392,7 +390,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_0 = MSG_EXTERNAL_PreviewTransferHeader$$SRC_APP_PREVIEW_TRANSFER_PREVIEW_TRANSFER_COMPONENT_TS_1;
 }
 else {
-    I18N_0 = "Preview Transfer";
+    I18N_0 = $localize `:Title for the Preview Transfer card@@PreviewTransferHeader␟769b8e9bc9b23cb3c3e62e135319a6fbe218ed3a␟7611725069949118237:Preview Transfer`;
 }
 var I18N_2;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -403,7 +401,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_2 = MSG_EXTERNAL_FromAccount$$SRC_APP_PREVIEW_TRANSFER_PREVIEW_TRANSFER_COMPONENT_TS_3;
 }
 else {
-    I18N_2 = "From Account";
+    I18N_2 = $localize `:lable for FromAccount@@FromAccount␟a9377fb734975cbf672296eb78be4146c0724480␟5859173719166354957:From Account`;
 }
 var I18N_4;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -414,7 +412,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_4 = MSG_EXTERNAL_ToAccount$$SRC_APP_PREVIEW_TRANSFER_PREVIEW_TRANSFER_COMPONENT_TS_5;
 }
 else {
-    I18N_4 = "To Account";
+    I18N_4 = $localize `:lable for ToAccount@@ToAccount␟e6a0156afb757d0a2ea410daf2f3a717ea6ebe37␟6295291551616731288:To Account`;
 }
 var I18N_6;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -425,7 +423,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_6 = MSG_EXTERNAL_PreviewAmount$$SRC_APP_PREVIEW_TRANSFER_PREVIEW_TRANSFER_COMPONENT_TS_7;
 }
 else {
-    I18N_6 = "Amount";
+    I18N_6 = $localize `:lable for Amount@@PreviewAmount␟dfc2fb58e2a04ed944a4bd80f0a2087775134068␟6533918067030990396:Amount`;
 }
 var I18N_8;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -436,7 +434,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_8 = MSG_EXTERNAL_Transfer$$SRC_APP_PREVIEW_TRANSFER_PREVIEW_TRANSFER_COMPONENT_TS_9;
 }
 else {
-    I18N_8 = "Transfer";
+    I18N_8 = $localize `:lable for Submit button@@Transfer␟798f7720c371eda6d7931bc590b771a02e2881bb␟8402696305361715603:Transfer`;
 }
 class PreviewTransferComponent {
     constructor(dataService, mappingService) {
@@ -563,7 +561,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_0 = MSG_EXTERNAL_RecentTransactionHeader$$SRC_APP_RECENT_TRANSACTIONS_RECENT_TRANSACTIONS_COMPONENT_TS_1;
 }
 else {
-    I18N_0 = "Recent Transactions";
+    I18N_0 = $localize `:Title for the Recent Transactions card@@RecentTransactionHeader␟aa6ce7e6e6fe5cd080713965451f25bca15a2a25␟2697417327357066096:Recent Transactions`;
 }
 var I18N_2;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -574,7 +572,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_2 = MSG_EXTERNAL_SearchFilter$$SRC_APP_RECENT_TRANSACTIONS_RECENT_TRANSACTIONS_COMPONENT_TS_3;
 }
 else {
-    I18N_2 = "Search by typing...";
+    I18N_2 = $localize `:Placeholder for Search filter@@SearchFilter␟ab11d4b244ee19c9dcf6ab94249ed38a550834f7␟1716667267974704679:Search by typing...`;
 }
 const _c4 = ["placeholder", I18N_2];
 var I18N_5;
@@ -586,7 +584,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_5 = MSG_EXTERNAL_SortBy$$SRC_APP_RECENT_TRANSACTIONS_RECENT_TRANSACTIONS_COMPONENT_TS_6;
 }
 else {
-    I18N_5 = "Sort by";
+    I18N_5 = $localize `:Label for Sort by@@SortBy␟ec97f67072a83aaa972536b18d83179f6e4bbec9␟7699622144571229146:Sort by`;
 }
 var I18N_7;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -597,7 +595,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_7 = MSG_EXTERNAL_SortByDate$$SRC_APP_RECENT_TRANSACTIONS_RECENT_TRANSACTIONS_COMPONENT_TS_8;
 }
 else {
-    I18N_7 = "Date";
+    I18N_7 = $localize `:Label for sortby Date@@SortByDate␟2f933b826a570836cab04f683970a2d22068458c␟3973931101896534797:Date`;
 }
 var I18N_9;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -608,7 +606,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_9 = MSG_EXTERNAL_SortbyBenificiary$$SRC_APP_RECENT_TRANSACTIONS_RECENT_TRANSACTIONS_COMPONENT_TS_10;
 }
 else {
-    I18N_9 = "Beneficiary";
+    I18N_9 = $localize `:Label for sortby Beneficiary@@SortbyBenificiary␟3f53a6f6a56819b145655527b57f3cb617abfdf5␟796906044646309002:Beneficiary`;
 }
 var I18N_11;
 if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
@@ -619,7 +617,7 @@ if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
     I18N_11 = MSG_EXTERNAL_SortbyAmount$$SRC_APP_RECENT_TRANSACTIONS_RECENT_TRANSACTIONS_COMPONENT_TS_12;
 }
 else {
-    I18N_11 = "Amount";
+    I18N_11 = $localize `:Label for sortby Amount@@SortbyAmount␟dfc2fb58e2a04ed944a4bd80f0a2087775134068␟6533918067030990396:Amount`;
 }
 function RecentTransactionsComponent_div_12_Template(rf, ctx) { if (rf & 1) {
     const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
