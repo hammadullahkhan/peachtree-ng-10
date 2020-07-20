@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import MockedTransactions from '../../../assets/mock/transactions.json';
+import MockedTransactions from '../../../peachtreebank/assets/mock/transactions.json';
 import { DataService } from "./data.service";
 
 import { ITransaction } from '../models/transaction.model';

@@ -28,12 +28,12 @@
             
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"              
+              "src/peachtreebank/favicon.ico",
+              "src/peachtreebank/assets"              
             ],
             "styles": [
-              "src/styles.css",
-              "src/fonts.css"
+              "src/peachtreebank/styles.css",
+              "src/peachtreebank/fonts.css"
             ],
             "scripts": []
           },
@@ -103,11 +103,11 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/peachtreebank/favicon.ico",
+              "src/peachtreebank/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/peachtreebank/styles.css"
             ],
             "scripts": []
           }
