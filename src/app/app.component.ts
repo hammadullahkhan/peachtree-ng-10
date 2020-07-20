@@ -8,18 +8,21 @@ import { DataService } from "./shared//services/data.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+ 
   title = 'peachtree-bank';
-
   isPreview: boolean = false;
 
-  constructor(private data: DataService) {     
+  constructor(private dataService: DataService) {     
   }
 
   ngOnInit(): void {    
-    this.data.currentMessage.subscribe(message => {
-      // console.log('app', message);
+    this.listenMessages();  
+  }
+
+  listenMessages() {
+    this.dataService.currentMessage.subscribe(message => {
       this.isPreview = (message) ? message.isPreview : false;
-    })
+    });
   }
 
 }

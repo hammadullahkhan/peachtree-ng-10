@@ -25,7 +25,6 @@ export class RecentTransactionsComponent implements OnInit {
 
   loadData(): void {
     this.transactions = this.mapService.loadMockedData();
-    // console.log(this.transactions);
   }
 
   listenTransfers(): void {
@@ -33,7 +32,6 @@ export class RecentTransactionsComponent implements OnInit {
       if (message && !message.isPreview) {
         const trans = this.mapService.mapTransferToTransactions(message);
         this.transactions.unshift(trans);
-        // console.log('transactions', this.transactions)
       }      
     });
   }

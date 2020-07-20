@@ -5,7 +5,6 @@ export class TransactionsSortPipe implements PipeTransform {
 
   transform(value: any[], sortKey: string, orderType: boolean): any {
 
-    // console.log('sort', value, sortKey, orderType)
     let sortOrder = orderType ? 'desc' : 'asc';
     sortOrder = sortOrder && (sortOrder.toLowerCase() as any);
 

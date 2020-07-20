@@ -14,7 +14,6 @@ export class MappingService {
   constructor(private dataService: DataService) { }
 
   loadMockedData() {
-    // console.log(MockedTransactions.data)
     let transactions:ITransaction[] = Object.assign([], MockedTransactions.data);
     transactions.forEach( item => {
       const amount = +item.amount;
@@ -27,7 +26,6 @@ export class MappingService {
 
     const amount = +message.amount;
     const trans: ITransaction = {
-        // amount: message.amount,
         amount:  (amount * -1).toFixed(2),
         categoryCode: "#d51271",
         transactionType: 'Transfer',
@@ -47,19 +45,16 @@ export class MappingService {
       amount: "0.00",
       isPreview: false
     };    
-    console.log(transfer)
     return transfer;
   }
 
   transferMoney(transfer: ITransfer) {
 
-    // console.log('transfer', transfer)
     transfer.isPreview = false;
     const amount = +transfer.amount;
     const dif = +(transfer.fromAccountBalance - amount).toFixed(2);
     transfer.fromAccountBalance = dif >= 500 ? dif : transfer.fromAccountBalance;
-    this.dataService.changeMessage(transfer);
-    console.log('transfer', transfer)
+    this.dataService.changeMessage(transfer);    
   }
 
 }
