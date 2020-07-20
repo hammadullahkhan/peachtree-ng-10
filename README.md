@@ -33,7 +33,7 @@ The previous setting should be removed as it will not make the `npm start` to wo
 Run `npm run build --prod`.
 
 ## Build for Production - GitHub
-npm run build --prod --baseHref="https://{githubusername}.github.io/{githubrepositoryname}/"
+npm run build --prod --base-href="https://{githubusername}.github.io/{githubrepositoryname}/"
 
 ## Running unit tests
 
