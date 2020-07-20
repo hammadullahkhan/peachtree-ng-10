@@ -32,6 +32,9 @@ The previous setting should be removed as it will not make the `npm start` to wo
 ## Build for Production
 Run `npm run build --prod`.
 
+## Build for Production - GitHub
+npm run build --prod --baseHref="https://{githubusername}.github.io/{githubrepositoryname}/"
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

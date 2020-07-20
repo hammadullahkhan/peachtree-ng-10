@@ -19,12 +19,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/",
+            "outputPath": "docs/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            
+            "localize": true,
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -80,10 +80,12 @@
               "browserTarget": "peachtree-bank:build:production"
             },
             "en-US": {
-              "browserTarget": "peachtree-bank:build:en-US"
+              "browserTarget": "peachtree-bank:build:en-US",
+              "baseHref": "/en-US/"
             },
             "fr": {
-              "browserTarget": "peachtree-bank:build:fr"
+              "browserTarget": "peachtree-bank:build:fr",
+              "baseHref": "/fr/"
             }
           }
         },
