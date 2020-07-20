@@ -1,41 +1,41 @@
 @font-face {
     font-family: 'Kanit-Black';
-    src: url("/peachtreebank/assets/Kanit/Kanit-Black.ttf") format("truetype");
+    src: url("/peachtreebank/peachtreebank/assets/Kanit/Kanit-Black.ttf") format("truetype");
     font-weight:300;
 }
 
 @font-face {
     font-family: 'Kanit-Bold';
-    src: url("/peachtreebank/assets/Kanit/Kanit-Bold.ttf") format("truetype");
+    src: url("/peachtreebank/peachtreebank/assets/Kanit/Kanit-Bold.ttf") format("truetype");
     font-weight:300;
 }
 
 @font-face {
     font-family: 'Kanit-ExtraBlack';
-    src: url("/peachtreebank/assets/Kanit/Kanit-ExtraBlack.ttf") format("truetype");
+    src: url("/peachtreebank/peachtreebank/assets/Kanit/Kanit-ExtraBlack.ttf") format("truetype");
     font-weight:300;
 }
 
 @font-face {
     font-family: 'Kanit-Light';
-    src: url("/peachtreebank/assets/Kanit/Kanit-Light.ttf") format("truetype");
+    src: url("/peachtreebank/peachtreebank/assets/Kanit/Kanit-Light.ttf") format("truetype");
     font-weight:300;
 }
 
 @font-face {
     font-family: 'Kanit-Medium';
-    src: url("/peachtreebank/assets/Kanit/Kanit-Medium.ttf") format("truetype");
+    src: url("/peachtreebank/peachtreebank/assets/Kanit/Kanit-Medium.ttf") format("truetype");
     font-weight:300;
 }
 
 @font-face {
     font-family: 'Kanit-SemiBold';
-    src: url("/peachtreebank/assets/Kanit/Kanit-SemiBold.ttf") format("truetype");
+    src: url("/peachtreebank/peachtreebank/assets/Kanit/Kanit-SemiBold.ttf") format("truetype");
     font-weight:300;
 }
 
 @font-face {
     font-family: 'Kanit-Thin';
-    src: url("/peachtreebank/assets/Kanit/Kanit-Thin.ttf") format("truetype");
+    src: url("/peachtreebank/peachtreebank/assets/Kanit/Kanit-Thin.ttf") format("truetype");
     font-weight:300;
 }
