@@ -24,6 +24,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "baseHref": "/peachtreebank/",
             
             "aot": true,
             "assets": [
