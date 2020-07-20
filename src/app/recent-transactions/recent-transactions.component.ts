@@ -31,6 +31,7 @@ export class RecentTransactionsComponent implements OnInit {
     this.data.currentMessage.subscribe(message => {
       if (message && !message.isPreview) {
         const trans = this.mapService.mapTransferToTransactions(message);
+        this.resetSorting();
         this.transactions.unshift(trans);
       }      
     });
@@ -39,5 +40,10 @@ export class RecentTransactionsComponent implements OnInit {
   setSortColumn(colName: string): void {
     this.sortColumn = colName;
     this.isDesc = !this.isDesc;
+  }
+
+  resetSorting(): void {
+    this.isDesc = true;
+    this.sortColumn = 'transactionDate';
   }
 }
