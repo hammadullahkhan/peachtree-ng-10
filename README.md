@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## GitHub Deployed
-https://hammadullahkhan.github.io/peachtreebank/
+https://hammadullahkhan.github.io/peachtree-ng-10/
 
 ## Development server
 
