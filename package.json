@@ -9,6 +9,7 @@
     "build:fr": "ng build --configuration=fr",
     "build:prod": "ng build --prod",
     "build:prod:fr": "ng build --configuration=fr --prod",
+    "build:githubpages": "ng build --prod --base-href /peachtree-ng-10/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
